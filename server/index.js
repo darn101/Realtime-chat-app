@@ -20,9 +20,6 @@ app.use(express.json());
 app.use('/api/auth', UserRoutes);
 app.use('/api/message', MessageRoute);
 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
 
 const server = app.listen('https://chat-zone-app.vercel.app/', () => {
