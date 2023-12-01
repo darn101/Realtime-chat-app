@@ -31,7 +31,7 @@ const Texts = ({ currentChat, socket, SelectContact }) => {
 
     const getChat = async () => {
         if (currentChat) {
-            const response = await axios.post(`https://chat-zone-five.vercel.app/api/message/getmsg`, {
+            const response = await axios.post(`https://chat-zone-backend.vercel.app/api/message/getmsg`, {
                 from: currentUser._id,
                 to: currentChat._id
             });
@@ -40,7 +40,7 @@ const Texts = ({ currentChat, socket, SelectContact }) => {
     }
 
     const HandleSendMsg = async (msg) => {
-        await axios.post(`https://chat-zone-five.vercel.app/api/message/addmsg`, {
+        await axios.post(`https://chat-zone-backend.vercel.app/api/message/addmsg`, {
             from: currentUser._id,
             to: currentChat._id,
             message: msg

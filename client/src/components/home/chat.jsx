@@ -45,7 +45,7 @@ const Chat = () => {
             if (currentUser.isAvatarImageSet) {
                 (async () => {
                     console.log('hello');
-                    const { data } = await axios.get(`https://chat-zone-five.vercel.app/api/auth/getAllusers/${currentUser._id}`);
+                    const { data } = await axios.get(`https://chat-zone-backend.vercel.app/api/auth/getAllusers/${currentUser._id}`);
                     console.log(data);
                     SetContacts(data);
                     console.log(contacts);
@@ -60,7 +60,7 @@ const Chat = () => {
 
     useEffect(() => {
         if (currentUser) {
-            socket.current = io('http://localhost:8000');
+            socket.current = io('https://chat-zone-backend.vercel.app');
             socket.current.emit("add-user", currentUser._id);
             console.log(currentUser._id);
         }
