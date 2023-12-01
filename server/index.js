@@ -14,8 +14,6 @@ const corsOptions = {
 
 require("dotenv").config();
 
-app.use(cors(corsOptions));
-app.use(express.json());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://chat-zone-app.vercel.app');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -23,6 +21,10 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Credentials', 'true'); // Allow credentials
     next();
 });
+
+app.use(cors(corsOptions));
+app.use(express.json());
+
 connection();
 app.use('/api/auth', UserRoutes);
 app.use('/api/message', MessageRoute);
