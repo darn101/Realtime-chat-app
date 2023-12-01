@@ -10,13 +10,7 @@ const app = express();
 
 require("dotenv").config();
 connection();
-app.use(cors(
-    {
-        origin: "https://chat-zone-app.vercel.app/",
-        methods: ["GET", "POST"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', UserRoutes);
@@ -35,7 +29,7 @@ const server = app.listen('https://chat-zone-app.vercel.app/', () => {
 
 const io = socket(server, {
     cors: {
-        origin: "https://chat-zone-app.vercel.app/login",
+        origin: "https://chat-zone-app.vercel.app",
         methods: ["GET", "POST"],
         credentials: true
     }
