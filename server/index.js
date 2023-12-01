@@ -8,7 +8,7 @@ const socket = require('socket.io');
 const app = express();
 
 const corsOptions = {
-    origin: 'https://chat-zone-app.vercel.app',
+    origin: '*',
     optionsSuccessStatus: 200,
 };
 
