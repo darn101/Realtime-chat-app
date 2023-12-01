@@ -7,14 +7,14 @@ const socket = require('socket.io');
 
 const app = express();
 
+const corsOptions = {
+    origin: 'https://chat-zone-app.vercel.app',
+    optionsSuccessStatus: 200,
+};
 
 require("dotenv").config();
 connection();
-app.use(cors({
-    origin: '*',
-    methods: ["POST", "GET"],
-    credentials: true
-}));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/auth', UserRoutes);
@@ -22,9 +22,9 @@ app.use('/api/message', MessageRoute);
 
 
 
-const server = app.listen('https://chat-zone-app.vercel.app', () => {
-    console.log('Server is running on Port', 'https://chat-zone-app.vercel.app');
-})
+// const server = app.listen('https://chat-zone-app.vercel.app', () => {
+//     console.log('Server is running on Port', 'https://chat-zone-app.vercel.app');
+// })
 
 //SOCKET ---------------------
 
