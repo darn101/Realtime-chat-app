@@ -22,8 +22,8 @@ app.use('/api/message', MessageRoute);
 
 
 
-const server = app.listen('https://chat-zone-app.vercel.app/', () => {
-    console.log('Server is running on Port', 'https://chat-zone-app.vercel.app/');
+const server = app.listen('https://chat-zone-app.vercel.app', () => {
+    console.log('Server is running on Port', 'https://chat-zone-app.vercel.app');
 })
 
 //SOCKET ---------------------
