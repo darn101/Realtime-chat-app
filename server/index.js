@@ -13,7 +13,7 @@ const corsOptions = {
 };
 
 require("dotenv").config();
-connection();
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use((req, res, next) => {
@@ -23,6 +23,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Credentials', 'true'); // Allow credentials
     next();
 });
+connection();
 app.use('/api/auth', UserRoutes);
 app.use('/api/message', MessageRoute);
 
