@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:8000';
+const URL = 'https://chat-zone-five.vercel.app';
 
 export const AuthenticateSignUp = async (data) => {
     try {

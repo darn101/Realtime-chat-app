@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 const SetAvatar = () => {
-    const SetAvatarRoute = 'http://localhost:8000/api/auth/setAvatar';
+    const SetAvatarRoute = 'https://chat-zone-five.vercel.app/api/auth/setAvatar';
     const avatars = [
         { src: "https://api.dicebear.com/7.x/adventurer/svg?seed=Precious" },
         { src: "https://api.dicebear.com/7.x/adventurer/svg?seed=Sassy" },
