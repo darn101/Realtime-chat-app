@@ -25,7 +25,7 @@ const server = app.listen('https://chat-zone-app.vercel.app/', () => {
 
 const io = socket(server, {
     cors: {
-        origin: ["https://chat-zone-app.vercel.app"],
+        origin: "https://chat-zone-app.vercel.app",
         methods: ["GET", "POST"],
         credentials: true
     }
