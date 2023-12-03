@@ -7,16 +7,20 @@ const socket = require('socket.io');
 
 const app = express();
 
-// const corsOptions = {
-//     origin: '*',
-//     methods: ["GET", "POST"],
-//     credentials: true
-// };
+const corsOptions = {
+    origin: '*',
+    methods: ["GET", "POST"],
+    credentials: true
+};
 
 require("dotenv").config();
 
 
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(express.json());
 
 connection();
