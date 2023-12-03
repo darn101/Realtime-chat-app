@@ -25,8 +25,8 @@ app.use('/api/message', MessageRoute);
 
 app.options('/api/auth/login', cors());
 
-const server = app.listen(8000, () => {
-    console.log('Server is running on Port', 8000);
+const server = app.listen(3000, () => {
+    console.log('Server is running on Port', 3000);
 })
 
 //SOCKET ---------------------
