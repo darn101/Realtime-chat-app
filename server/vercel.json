@@ -28,6 +28,5 @@
                 }
             ]
         }
-    ],
-    "buildCommand": "next build"
+    ]
 }
